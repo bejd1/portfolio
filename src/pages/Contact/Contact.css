@@ -1,0 +1,11 @@
+.contact-container {
+  height: 30vh;
+  padding-top: 50px;
+}
+
+.contact-container h2 {
+  margin: 0;
+  text-align: center;
+  font-size: 44px;
+  letter-spacing: 12px;
+}
