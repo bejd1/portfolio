@@ -16,7 +16,7 @@
   justify-content: center;
   align-items: center;
   margin-top: 30px;
-  padding: 0 40px;
+  padding: 0 140px;
 }
 
 .skills-container-item {
@@ -48,4 +48,15 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+}
+
+@media only screen and (max-width: 1200px) {
+  .skills-container-items {
+    padding: 0 70px;
+  }
+}
+@media only screen and (max-width: 756px) {
+  .skills-container-items {
+    padding: 0 40px;
+  }
 }

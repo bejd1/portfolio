@@ -4,6 +4,7 @@ import { Home } from "./pages/Home/Home";
 import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
 import { Nav } from "./pages/Nav/Nav";
 import { Projects } from "./pages/Projects/Projects";
+import { Project } from "./pages/Project/Project";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="/project/:id" element={<Project />} />
 
           <Route
             path="*"

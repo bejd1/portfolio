@@ -24,6 +24,7 @@
 
 .main-container-right {
   margin: 100px;
+  margin-top: 150px;
   margin-left: 0;
   grid-column: 2/ 3;
 }

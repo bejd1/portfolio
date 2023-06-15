@@ -19,6 +19,11 @@
   padding: 0 40px;
 }
 
+.projects-container-box h3 {
+  text-decoration: none;
+  color: #fff;
+}
+
 .projects-container-box {
   text-align: center;
   text-transform: capitalize;
@@ -30,8 +35,24 @@
   border: 1px solid #fff;
 }
 
+.projects-container-box-btns {
+  display: flex;
+  justify-content: space-evenly;
+}
+
 @media only screen and (max-width: 1150px) {
+  .projects-container {
+    height: 100%;
+  }
   .projects-container-items {
     flex-direction: column;
+  }
+  .projects-container-items:last-child {
+    margin-bottom: 60px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .projects-container-items {
+    padding: 10px;
   }
 }

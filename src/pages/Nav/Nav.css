@@ -52,7 +52,7 @@
 .nav-right-links {
   display: flex;
   flex-direction: row;
-  gap: 50px;
+  gap: 35px;
 }
 
 .nav-right-link {

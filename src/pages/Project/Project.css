@@ -1,0 +1,112 @@
+.project-container {
+  margin-top: 50px;
+  height: 84vh;
+}
+.project-container-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.project-container h2 {
+  margin: 0;
+  text-align: center;
+  font-size: 44px;
+  letter-spacing: 12px;
+  margin-bottom: 60px;
+  text-transform: capitalize;
+}
+
+/* project left */
+.project-container-left {
+  grid-column: 1/2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* project right  */
+.project-container-right {
+  grid-column: 2/3;
+  margin-right: 30px;
+}
+
+.project-container-right p {
+  width: 500px;
+}
+
+.project-container-right-technologies {
+  display: flex;
+  padding: 0;
+  list-style: none;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.project-container-right-technologies li {
+  background-color: #2d79c7;
+  padding: 8px 16px;
+  font-weight: bold;
+  border-radius: 4px;
+  text-transform: capitalize;
+}
+
+.project-container-right-btns {
+  display: flex;
+  gap: 20px;
+}
+
+.project-container-right-btns-live,
+.project-container-right-btns-github {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+}
+
+.project-container-right-btns-github a,
+.project-container-right-btns-live a {
+  text-decoration: underline;
+  color: #fff;
+}
+
+/* media */
+
+@media only screen and (max-width: 992px) {
+  .project-container {
+    height: 100%;
+    margin: 0 40px;
+  }
+
+  .project-container h2 {
+    margin-top: 60px;
+  }
+  .project-container-right p {
+    width: 100%;
+  }
+  .project-container-grid {
+    display: flex;
+    flex-direction: column;
+  }
+  .project-container-right {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 50px auto;
+    text-align: center;
+  }
+  .project-container-right h4 {
+    margin: 10px;
+  }
+  .project-container-right-technologies,
+  .project-container-right-btns {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 16px;
+  }
+}
+
+@media only screen and (max-width: 442px) {
+  .project-container-right-technologies {
+    flex-direction: column;
+    margin: 15px;
+  }
+}

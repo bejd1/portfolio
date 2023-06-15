@@ -1,5 +1,6 @@
 import {
   Envelope,
+  Github,
   House,
   JournalCode,
   Linkedin,
@@ -42,6 +43,14 @@ export const Nav = () => {
                 <Linkedin />
               </div>
               <p className="nav-right-link-title">Linkedin</p>
+            </div>
+          </a>
+          <a href="https://github.com/bejd1">
+            <div className="nav-right-link">
+              <div className="nav-right-link-icon">
+                <Github />
+              </div>
+              <p className="nav-right-link-title">Github</p>
             </div>
           </a>
         </div>

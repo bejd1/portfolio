@@ -11,7 +11,7 @@ export const Main = () => {
         />
       </div>
       <div className="main-container-right">
-        <p>Hi, Im Filip Bajdan</p>
+        <p>Hi, I'm Filip</p>
         <h1>Front-End Developer</h1>
         <p>
           Are you in need of a skilled React developer who can bring your

@@ -1,7 +1,6 @@
 import { Contact } from "../Contact/Contact";
 import { Main } from "../Main/Main";
 import { Skills } from "../Skills/Skills";
-import "./Home.css";
 
 export const Home = () => {
   return (
