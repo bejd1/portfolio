@@ -7,6 +7,12 @@
   font-size: 18px;
 }
 
+.nav Link,
+.nav a {
+  text-decoration: none;
+  color: #fff;
+}
+
 /* nav left */
 
 .nav-left {
@@ -25,6 +31,7 @@
   border: 1px solid #fff;
   border-radius: 50%;
   font-weight: bold;
+  cursor: pointer;
 }
 .nav-left-text {
   display: flex;
@@ -46,6 +53,15 @@
   display: flex;
   flex-direction: row;
   gap: 50px;
+}
+
+.nav-right-link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  cursor: pointer;
 }
 
 .nav-right-switch {

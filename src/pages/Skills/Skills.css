@@ -6,6 +6,7 @@
   text-align: center;
   font-size: 44px;
   letter-spacing: 12px;
+  margin-bottom: 60px;
 }
 
 .skills-container-items {
@@ -15,18 +16,18 @@
   justify-content: center;
   align-items: center;
   margin-top: 30px;
+  padding: 0 40px;
 }
 
 .skills-container-item {
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  text-transform: uppercase;
 }
 
 .skills-container-item img {
-  position: absolute;
   width: 100px;
   height: 100px;
   z-index: 2;
@@ -35,8 +36,16 @@
 }
 
 .skills-container-item-circle {
+  position: relative;
   width: 150px;
   height: 150px;
-  background-color: #fff;
+  border: 1px solid #fff;
   border-radius: 50%;
+}
+
+.skills-container-item-circle img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }

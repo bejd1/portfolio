@@ -1,18 +1,35 @@
 import "./App.css";
-import { Contact } from "./pages/Contact/Contact";
 import { Footer } from "./pages/Footer/Footer";
-import { Main } from "./pages/Main/Main";
+import { Home } from "./pages/Home/Home";
+import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
 import { Nav } from "./pages/Nav/Nav";
-import { Skills } from "./pages/Skills/Skills";
+import { Projects } from "./pages/Projects/Projects";
 
 function App() {
   return (
     <div className="App">
-      <Nav />
-      <Main />
-      <Skills />
-      <Contact />
-      <Footer />
+      <BrowserRouter>
+        {/* {isOpen && <Menu menuToggle={menuToggle} />} */}
+        <Nav />
+        {/* <Nav menuToggle={menuToggle} /> */}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/projects" element={<Projects />} />
+
+          <Route
+            path="*"
+            element={
+              <div className="not__exit">
+                <h2 className="not__exits">This page does not exist</h2>
+                <Link to="/" className="not__exit-btn">
+                  back to home
+                </Link>
+              </div>
+            }
+          />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
     </div>
   );
 }

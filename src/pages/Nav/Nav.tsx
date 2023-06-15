@@ -1,5 +1,12 @@
-import { Envelope, List } from "react-bootstrap-icons";
+import {
+  Envelope,
+  House,
+  JournalCode,
+  Linkedin,
+  List,
+} from "react-bootstrap-icons";
 import "./Nav.css";
+import { Link } from "react-router-dom";
 // import Example from "../../components/Switch/Switch";
 
 export const Nav = () => {
@@ -13,9 +20,30 @@ export const Nav = () => {
       </div>
       <div className="nav-right">
         <div className="nav-right-links">
-          <p>Project</p>
-          <p>Linkedin</p>
-          <p>Contact</p>
+          <Link to="/">
+            <div className="nav-right-link">
+              <div className="nav-right-link-icon">
+                <House />
+              </div>
+              <p className="nav-right-link-title">Home</p>
+            </div>
+          </Link>
+          <Link to="/projects">
+            <div className="nav-right-link">
+              <div className="nav-right-link-icon">
+                <JournalCode />
+              </div>
+              <p className="nav-right-link-title">Projects</p>
+            </div>
+          </Link>
+          <a href="https://www.linkedin.com/in/bejdi7-undefined-a6393b273/">
+            <div className="nav-right-link">
+              <div className="nav-right-link-icon">
+                <Linkedin />
+              </div>
+              <p className="nav-right-link-title">Linkedin</p>
+            </div>
+          </a>
         </div>
         <div className="nav-right-switch">
           <List className="list" />

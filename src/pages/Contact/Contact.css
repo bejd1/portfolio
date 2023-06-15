@@ -1,5 +1,8 @@
 .contact-container {
-  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   padding-top: 50px;
 }
 
@@ -8,4 +11,23 @@
   text-align: center;
   font-size: 44px;
   letter-spacing: 12px;
+  margin-bottom: 60px;
+}
+
+.contact-container-row {
+  display: flex;
+  gap: 100px;
+  margin-bottom: 100px;
+}
+.contact-container-info-email,
+.contact-container-info-linkedin,
+.contact-container-info-phone {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.contact-container-info-linkedin a {
+  text-decoration: underline;
+  color: #fff;
 }
