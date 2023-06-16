@@ -1,0 +1,17 @@
+.menu a {
+  text-decoration: none;
+  font-family: "Inter", sans-serif;
+}
+.menu span {
+  font-family: "Inter", sans-serif;
+  color: black;
+}
+.menu-icon {
+  min-width: 0;
+  font-size: 25px;
+  color: #000;
+}
+
+.ListItemIcon {
+  color: black;
+}

@@ -62,10 +62,51 @@
   gap: 5px;
 }
 
-.project-container-right-btns-github a,
-.project-container-right-btns-live a {
-  text-decoration: underline;
+.project-container-right-btns a {
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
   color: #fff;
+  text-underline-offset: 12px;
+}
+
+.project-container-right-btns a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  margin-top: 2px;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+.project-container-right-btns a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* page not exits */
+
+.page-not-exist {
+  height: 89vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.page-not-exits-btn {
+  background-color: #2d79c7;
+  padding: 13px 20px;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-family: "Inter", sans-serif;
 }
 
 /* media */
@@ -108,5 +149,13 @@
   .project-container-right-technologies {
     flex-direction: column;
     margin: 15px;
+  }
+  .project-container p {
+    margin: 0;
+    font-size: 18px;
+  }
+  .project-container h2 {
+    margin: 10px;
+    font-size: 33px;
   }
 }

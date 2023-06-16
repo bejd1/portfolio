@@ -5,26 +5,26 @@ import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
 import { Nav } from "./pages/Nav/Nav";
 import { Projects } from "./pages/Projects/Projects";
 import { Project } from "./pages/Project/Project";
+import { AboutMe } from "./pages/AboutMe/AboutMe";
 
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        {/* {isOpen && <Menu menuToggle={menuToggle} />} */}
         <Nav />
-        {/* <Nav menuToggle={menuToggle} /> */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/project/:id" element={<Project />} />
+          <Route path="/aboutme" element={<AboutMe />} />
 
           <Route
             path="*"
             element={
-              <div className="not__exit">
-                <h2 className="not__exits">This page does not exist</h2>
-                <Link to="/" className="not__exit-btn">
-                  back to home
+              <div className="page-not-exist">
+                <h2>This page does not exist</h2>
+                <Link to="/">
+                  <button className="page-not-exits-btn">back to home</button>
                 </Link>
               </div>
             }

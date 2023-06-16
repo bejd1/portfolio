@@ -1,6 +1,6 @@
 import { Envelope, Linkedin, Telephone } from "react-bootstrap-icons";
 import "./Contact.css";
-import { ContactInput } from "./ContactInput";
+// import { ContactInput } from "./ContactInput";
 
 export const Contact = () => {
   return (
@@ -30,7 +30,7 @@ export const Contact = () => {
           </div>
         </div>
 
-        <ContactInput />
+        {/* <ContactInput /> */}
       </div>
     </div>
   );

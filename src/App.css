@@ -1,0 +1,20 @@
+/* page not exits */
+
+.page-not-exist {
+  height: 89vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.page-not-exits-btn {
+  background-color: tomato;
+  padding: 13px 20px;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-family: "Inter", sans-serif;
+}

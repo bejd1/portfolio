@@ -4,10 +4,13 @@ import {
   House,
   JournalCode,
   Linkedin,
-  List,
+  Person,
 } from "react-bootstrap-icons";
 import "./Nav.css";
 import { Link } from "react-router-dom";
+import TemporaryDrawer from "../../components/Menu/Menu";
+import { NavHashLink } from "react-router-hash-link";
+
 // import Example from "../../components/Switch/Switch";
 
 export const Nav = () => {
@@ -29,6 +32,14 @@ export const Nav = () => {
               <p className="nav-right-link-title">Home</p>
             </div>
           </Link>
+          <NavHashLink smooth to="/#about">
+            <div className="nav-right-link">
+              <div className="nav-right-link-icon">
+                <Person />
+              </div>
+              <p className="nav-right-link-title">About me</p>
+            </div>
+          </NavHashLink>
           <Link to="/projects">
             <div className="nav-right-link">
               <div className="nav-right-link-icon">
@@ -55,8 +66,7 @@ export const Nav = () => {
           </a>
         </div>
         <div className="nav-right-switch">
-          <List className="list" />
-          {/* <Example /> */}
+          <TemporaryDrawer />
         </div>
       </div>
     </div>

@@ -33,8 +33,39 @@
   align-items: center;
   gap: 7px;
 }
-
 .contact-container-info-linkedin a {
-  text-decoration: underline;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
   color: #fff;
+}
+
+.contact-container-info-linkedin a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  margin-top: 2px;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+.contact-container-info-linkedin a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+@media only screen and (max-width: 442px) {
+  .contact-container-info {
+    border: 1px solid #fff;
+    border-radius: 12px;
+    padding: 30px 40px;
+  }
+
+  .contact-container h2 {
+    font-size: 30px;
+  }
 }

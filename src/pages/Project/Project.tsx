@@ -1,32 +1,55 @@
-import React from "react";
+import { useState } from "react";
 import "./Project.css";
 import { Github, Globe } from "react-bootstrap-icons";
+import { useParams, Link } from "react-router-dom";
+import { ProjectList } from "../Projects/ProjectsList";
+
+type ProjectProp = {
+  id: number;
+  name: string;
+  image: string;
+  desciption: string;
+  technologies: string[];
+  github: string;
+  live: string;
+};
 
 export const Project = () => {
+  const [items] = useState<ProjectProp[]>([...ProjectList]);
+  const { id } = useParams();
+
+  const item = items.find((item) => item.id === Number(id));
+
+  if (!item) {
+    return (
+      <div className="page-not-exist">
+        <h2>This page does not exist</h2>
+        <Link to="/">
+          <button className="page-not-exits-btn">back to home</button>
+        </Link>
+      </div>
+    );
+  }
+
   return (
-    <div className="project-container">
-      <h2>Field finder</h2>
+    <div className="project-container" key={item.id}>
+      <h2>{item.name}</h2>
       <div className="project-container-grid">
         <div className="project-container-left">
           <img
             style={{ height: "500px", width: "350px" }}
-            src="https://m.media-amazon.com/images/I/61f3atnSHcL._AC_UF1000,1000_QL80_.jpg"
-            alt=""
+            src={item.image}
+            alt={item.name}
           />
         </div>
         <div className="project-container-right">
           <h4>About</h4>
-          <p>
-            Desc. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel
-            quas aut delectus cupiditate, accusantium quisquam dolorem animi
-            quaerat error, veniam, culpa laborum?
-          </p>
+          <p>{item.desciption}</p>
           <h4>Technologies</h4>
           <ul className="project-container-right-technologies">
-            <li>css</li>
-            <li>react</li>
-            <li>redux</li>
-            <li>typescript</li>
+            {item.technologies.map((tech, index) => {
+              return <li key={index}>{tech}</li>;
+            })}
           </ul>
           <h4>Links</h4>
           <div className="project-container-right-btns">
@@ -34,13 +57,13 @@ export const Project = () => {
               <div className="nav-right-link-icon">
                 <Github />
               </div>
-              <a href="https://github.com/bejd1">Github</a>
+              <a href={item.github}>Github</a>
             </div>
             <div className="project-container-right-btns-live">
               <div className="nav-right-link-icon">
                 <Globe />
               </div>
-              <a href="https://github.com/bejd1">Live</a>
+              <a href={item.live}>Live</a>
             </div>
           </div>
         </div>

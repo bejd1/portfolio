@@ -55,8 +55,14 @@
     padding: 0 70px;
   }
 }
-@media only screen and (max-width: 756px) {
+@media only screen and (max-width: 768px) {
   .skills-container-items {
     padding: 0 40px;
+  }
+}
+
+@media only screen and (max-width: 442px) {
+  .skills-container h2 {
+    font-size: 30px;
   }
 }
