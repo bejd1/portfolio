@@ -11,9 +11,15 @@ import { Link } from "react-router-dom";
 import TemporaryDrawer from "../../components/Menu/Menu";
 import { NavHashLink } from "react-router-hash-link";
 
-// import Example from "../../components/Switch/Switch";
-
 export const Nav = () => {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <div className="nav">
       <div className="nav-left">
@@ -24,7 +30,7 @@ export const Nav = () => {
       </div>
       <div className="nav-right">
         <div className="nav-right-links">
-          <Link to="/">
+          <Link to="/" onClick={scrollToTop}>
             <div className="nav-right-link">
               <div className="nav-right-link-icon">
                 <House />
@@ -40,7 +46,7 @@ export const Nav = () => {
               <p className="nav-right-link-title">About me</p>
             </div>
           </NavHashLink>
-          <Link to="/projects">
+          <Link to="/projects" onClick={scrollToTop}>
             <div className="nav-right-link">
               <div className="nav-right-link-icon">
                 <JournalCode />
@@ -65,7 +71,7 @@ export const Nav = () => {
             </div>
           </a>
         </div>
-        <div className="nav-right-switch">
+        <div className="nav-right-menu">
           <TemporaryDrawer />
         </div>
       </div>

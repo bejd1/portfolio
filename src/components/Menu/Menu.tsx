@@ -16,6 +16,7 @@ import {
   Linkedin,
   Person,
 } from "react-bootstrap-icons";
+import { NavHashLink } from "react-router-hash-link";
 import "./Menu.css";
 
 type Anchor = "right";
@@ -39,81 +40,61 @@ export default function TemporaryDrawer() {
       setState({ ...state, [anchor]: open });
     };
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  };
+
   const list = (anchor: Anchor) => (
     <Box
-      sx={{ width: 220 }}
       role="presentation"
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
+      className="menu-box"
     >
       <List className="menu">
-        <ListItem
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            width: "220px",
-          }}
-        >
-          <Link to="/">
-            <ListItemButton
-              style={{ width: "220px", textAlign: "center", fontSize: "18px" }}
-            >
+        <ListItem className="menu-list">
+          <Link to="/" onClick={scrollToTop}>
+            <ListItemButton className="menu-item">
               <ListItemIcon className="menu-icon">
-                <House />
+                <House style={{ color: "black" }} />
               </ListItemIcon>
-              <ListItemText
-                primary="Home"
-                style={{ color: "black", fontSize: "18px" }}
-              />
+              <ListItemText primary="Home" style={{ color: "black" }} />
             </ListItemButton>
           </Link>
-          <Link to="/about">
-            <ListItemButton
-              style={{ width: "220px", textAlign: "center", fontSize: "18px" }}
-            >
+          <NavHashLink smooth to="/#about">
+            <ListItemButton className="menu-item">
               <ListItemIcon className="menu-icon">
-                <Person />
+                <Person style={{ color: "black" }} />
               </ListItemIcon>
               <ListItemText primary="About me" />
             </ListItemButton>
-          </Link>
-          <Link to="/projects">
-            <ListItemButton
-              style={{ width: "220px", textAlign: "center", fontSize: "18px" }}
-            >
+          </NavHashLink>
+          <Link to="/projects" onClick={scrollToTop}>
+            <ListItemButton className="menu-item">
               <ListItemIcon className="menu-icon">
-                <JournalCode />
+                <JournalCode style={{ color: "black" }} />
               </ListItemIcon>
-              <ListItemText
-                primary="Projects"
-                style={{ color: "black", fontSize: "18px" }}
-              />
+              <ListItemText primary="Projects" style={{ color: "black" }} />
             </ListItemButton>
           </Link>
           <a href="https://www.linkedin.com/in/bejdi7-undefined-a6393b273/">
-            <ListItemButton
-              style={{ width: "220px", textAlign: "center", fontSize: "18px" }}
-            >
+            <ListItemButton className="menu-item">
               <ListItemIcon className="menu-icon">
-                <Linkedin />
+                <Linkedin style={{ color: "black" }} />
               </ListItemIcon>
-              <ListItemText
-                primary="Linkedin"
-                style={{ color: "black", fontSize: "18px" }}
-              />
+              <ListItemText primary="Linkedin" style={{ color: "black" }} />
             </ListItemButton>
           </a>
           <a href="https://github.com/bejd1">
-            <ListItemButton
-              style={{ width: "220px", textAlign: "center", fontSize: "18px" }}
-            >
+            <ListItemButton className="menu-item">
               <ListItemIcon className="menu-icon">
-                <Github />
+                <Github style={{ color: "black" }} />
               </ListItemIcon>
-              <ListItemText
-                primary="Github"
-                style={{ color: "black", fontSize: "18px" }}
-              />
+              <ListItemText primary="Github" style={{ color: "black" }} />
             </ListItemButton>
           </a>
         </ListItem>

@@ -6,12 +6,42 @@
   font-family: "Inter", sans-serif;
   color: black;
 }
+
+.menu-box {
+  width: 220px;
+}
+.menu-list {
+  display: "flex";
+  flex-direction: column;
+  width: 220px;
+}
+
+.menu-item {
+  width: 220px;
+}
+.menu-item span {
+  text-align: center;
+}
+
 .menu-icon {
   min-width: 0;
   font-size: 25px;
   color: #000;
 }
 
-.ListItemIcon {
-  color: black;
+@media only screen and (max-width: 442px) {
+  .menu-box {
+    width: 180px;
+  }
+
+  .menu-list {
+    width: 180px;
+  }
+
+  .menu-item {
+    width: 180px;
+  }
+  .menu-item span {
+    text-align: center;
+  }
 }

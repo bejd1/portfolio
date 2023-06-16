@@ -9,6 +9,13 @@ type ProjectsProp = {
 };
 
 export const Projects: React.FC = () => {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  };
   return (
     <div className="projects-container">
       <h2>Projects</h2>
@@ -16,7 +23,7 @@ export const Projects: React.FC = () => {
         {ProjectList.map((project: ProjectsProp) => {
           const { name, id, image } = project;
           return (
-            <Link key={id} to={`/project/${id}`}>
+            <Link key={id} to={`/project/${id}`} onClick={scrollToTop}>
               <div className="projects-container-box">
                 <div className="projects-container-box-inside">
                   <img src={image} alt={name} />

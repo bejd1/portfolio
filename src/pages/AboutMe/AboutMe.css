@@ -1,6 +1,6 @@
 .about-me-container {
   margin: 50px 0;
-  padding: 0 140px;
+  padding: 40px 140px;
 }
 
 .about-me-container h2 {
@@ -18,12 +18,12 @@
 
 @media only screen and (max-width: 1200px) {
   .about-me-container {
-    padding: 0 70px;
+    padding: 30px 70px;
   }
 }
 @media only screen and (max-width: 768px) {
   .about-me-container {
-    padding: 0 40px;
+    padding: 30px 40px;
   }
 }
 
