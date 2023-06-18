@@ -1,14 +1,27 @@
+import { useRef } from "react";
 import "./Skills.css";
 import { SkillsList } from "./SkillsList";
+import { useInView } from "framer-motion";
 
 export const Skills = () => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
   return (
     <div className="skills-container">
       <h2>Skills</h2>
       <div className="skills-container-items">
         {SkillsList.map((item, index) => {
           return (
-            <div key={index} className="skills-container-item">
+            <div
+              ref={ref}
+              style={{
+                transform: isInView ? "none" : "translateX(-200px)",
+                opacity: isInView ? 1 : 0,
+                transition: "all 1.4s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s",
+              }}
+              key={index}
+              className="skills-container-item"
+            >
               <div className="skills-container-item-circle">
                 <img src={item.url} alt={`${item.name} icon`} />
               </div>

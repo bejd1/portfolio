@@ -8,7 +8,7 @@
   flex-direction: column;
 }
 .page-not-exits-btn {
-  background-color: tomato;
+  background-color: #2d79c7;
   padding: 13px 20px;
   border: none;
   border-radius: 10px;
@@ -17,4 +17,8 @@
   text-transform: uppercase;
   cursor: pointer;
   font-family: "Inter", sans-serif;
+  transition: background-color linear 0.3s;
+}
+.page-not-exits-btn:hover {
+  background-color: #2977c5bb;
 }

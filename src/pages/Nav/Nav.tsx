@@ -10,8 +10,15 @@ import "./Nav.css";
 import { Link } from "react-router-dom";
 import TemporaryDrawer from "../../components/Menu/Menu";
 import { NavHashLink } from "react-router-hash-link";
+import { motion } from "framer-motion";
+import Tooltip from "@mui/material/Tooltip";
+import { useCopyToClipboard } from "usehooks-ts";
+import { useState } from "react";
 
 export const Nav = () => {
+  const email: string = "bejdi7@gmail.com";
+  const [isCopied, setIsCopied] = useState(false);
+  const [value, copy] = useCopyToClipboard();
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -19,16 +26,37 @@ export const Nav = () => {
       behavior: "smooth",
     });
   };
+  const copyToClipboard = () => {
+    copy(email);
+    setIsCopied(true);
+  };
 
   return (
     <div className="nav">
-      <div className="nav-left">
-        <div className="nav-left-icon">
-          <Envelope />
-        </div>
-        <div className="nav-left-text">bejdi7@gmail.com</div>
-      </div>
-      <div className="nav-right">
+      <motion.div
+        initial={{ x: -330 }}
+        animate={{ x: 0 }}
+        transition={{ duration: 0.8, delay: 0.5 }}
+        className="nav-left"
+      >
+        <Tooltip
+          title={!isCopied ? "Copy email" : "Copied!"}
+          className="tooltop"
+          arrow
+        >
+          <div className="nav-left-icon" onClick={() => copyToClipboard()}>
+            <Envelope />
+          </div>
+        </Tooltip>
+        {/* {isCopied && <div>elo</div>} */}
+        <div className="nav-left-text">{email}</div>
+      </motion.div>
+      <motion.div
+        initial={{ x: 700, y: 0 }}
+        animate={{ x: 0, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+        className="nav-right"
+      >
         <div className="nav-right-links">
           <Link to="/" onClick={scrollToTop}>
             <div className="nav-right-link">
@@ -71,10 +99,15 @@ export const Nav = () => {
             </div>
           </a>
         </div>
-        <div className="nav-right-menu">
-          <TemporaryDrawer />
-        </div>
-      </div>
+      </motion.div>
+      <motion.div
+        initial={{ x: 200, y: 0 }}
+        animate={{ x: 0, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+        className="nav-right-menu"
+      >
+        <TemporaryDrawer />
+      </motion.div>
     </div>
   );
 };

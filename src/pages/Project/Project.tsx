@@ -36,11 +36,7 @@ export const Project = () => {
       <h2>{item.name}</h2>
       <div className="project-container-grid">
         <div className="project-container-left">
-          <img
-            style={{ height: "500px", width: "350px" }}
-            src={item.image}
-            alt={item.name}
-          />
+          <img src={item.image} alt={item.name} />
         </div>
         <div className="project-container-right">
           <h4>About</h4>

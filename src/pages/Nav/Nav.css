@@ -5,6 +5,7 @@
   align-items: center;
   height: 80px;
   font-size: 18px;
+  overflow: hidden;
 }
 
 .nav Link,
@@ -97,6 +98,11 @@
   right: 35px;
 }
 
+.tooltip {
+  background-color: #fff;
+  color: red;
+}
+
 /* media */
 
 @media only screen and (max-width: 1200px) {
@@ -112,6 +118,7 @@
   }
   .nav-right {
     margin-right: 50px;
+    display: none;
   }
 }
 

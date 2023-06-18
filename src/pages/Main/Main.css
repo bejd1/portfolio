@@ -26,15 +26,20 @@
   margin-top: 150px;
   margin-left: 0;
   grid-column: 2/ 3;
+  position: relative;
 }
 
-.main-container-right p {
+.main-container-right-title {
   margin: 0;
   font-size: 23px;
 }
 .main-container-right h1 {
   margin: 0;
   font-size: 55px;
+}
+
+.main-container-right p {
+  max-width: 500px;
 }
 
 /* media */
@@ -67,6 +72,14 @@
     margin: 30px 0;
     height: 350px;
     width: 300px;
+  }
+
+  .main-container-right h1 {
+    font-size: 43px;
+  }
+  .main-container-right p {
+    padding-top: 20px;
+    max-width: 100%;
   }
 }
 

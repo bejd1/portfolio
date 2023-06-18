@@ -1,6 +1,5 @@
 .projects-container {
   padding-top: 50px;
-  height: 84vh;
 }
 .projects-container h2 {
   margin: 0;
@@ -16,7 +15,8 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 70px;
-  padding: 0 40px;
+  padding: 0 80px;
+  margin-bottom: 30px;
 }
 
 .projects-container-items a:link {
@@ -25,7 +25,10 @@
 }
 
 .projects-container-box {
+  display: flex;
   text-align: center;
+  flex-direction: column;
+  align-items: center;
   text-transform: capitalize;
   color: #fff;
 }
@@ -58,19 +61,31 @@
 }
 
 .projects-container-box-inside {
-  height: 300px;
-  width: 300px;
-  border: 1px solid #fff;
+  position: relative;
+  width: 60%;
+  height: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
 }
 
 img {
-  height: 300px;
-  width: 300px;
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 8px;
 }
 
 .projects-container-box-btns {
   display: flex;
   justify-content: space-evenly;
+}
+
+@media only screen and (max-width: 1400px) {
+  .projects-container-box-inside {
+    width: 80%;
+    height: 60%;
+  }
 }
 
 @media only screen and (max-width: 1150px) {
@@ -84,17 +99,27 @@ img {
     margin-bottom: 60px;
   }
 }
+@media only screen and (max-width: 756px) {
+  .projects-container-box-inside {
+    width: 100%;
+    height: 100%;
+  }
+  .projects-container-items {
+    padding: 40px;
+  }
+}
+@media only screen and (max-width: 552px) {
+  .projects-container-items {
+    padding: 20px;
+  }
+}
 @media only screen and (max-width: 442px) {
   .projects-container p {
     margin: 0;
     font-size: 18px;
   }
   .projects-container h2 {
-    margin: 0;
     font-size: 33px;
     margin-top: 10px;
-  }
-  .projects-container-items {
-    padding: 10px;
   }
 }
