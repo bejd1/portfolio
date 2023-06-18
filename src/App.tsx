@@ -8,6 +8,14 @@ import { Project } from "./pages/Project/Project";
 import { AboutMe } from "./pages/AboutMe/AboutMe";
 
 function App() {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <div className="App">
       <BrowserRouter>
@@ -23,7 +31,7 @@ function App() {
             element={
               <div className="page-not-exist">
                 <h2>This page does not exist</h2>
-                <Link to="/">
+                <Link to="/" onClick={scrollToTop}>
                   <button className="page-not-exits-btn">back to home</button>
                 </Link>
               </div>

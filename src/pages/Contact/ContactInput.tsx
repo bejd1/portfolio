@@ -73,25 +73,23 @@ export const ContactUs: React.FC = () => {
   return (
     <div className="form-container">
       <form ref={form} onSubmit={sendEmail}>
-        <div className="form-row">
-          <label>Name</label>
-          <input
-            type="name"
-            name="user_name"
-            className="form-name"
-            placeholder="Name"
-          />
-          {nameError && <span style={{ color: "red" }}>{nameError}</span>}
+        <label>Name</label>
+        <input
+          type="name"
+          name="user_name"
+          className="form-name"
+          placeholder="Name"
+        />
+        {nameError && <span>{nameError}</span>}
 
-          <label>Email</label>
-          <input
-            type="email"
-            name="user_email"
-            className="form-email"
-            placeholder="Email"
-          />
-          {emailError && <span style={{ color: "red" }}>{emailError}</span>}
-        </div>
+        <label>Email</label>
+        <input
+          type="email"
+          name="user_email"
+          className="form-email"
+          placeholder="Email"
+        />
+        {emailError && <span>{emailError}</span>}
 
         <label>Message</label>
         <textarea
@@ -100,7 +98,7 @@ export const ContactUs: React.FC = () => {
           placeholder="Your Message"
           rows={4}
         />
-        {messageError && <span style={{ color: "red" }}>{messageError}</span>}
+        {messageError && <span>{messageError}</span>}
         <input type="submit" value="Send" className="form-btn" />
       </form>
     </div>

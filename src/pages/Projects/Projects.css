@@ -12,11 +12,9 @@
 .projects-container-items {
   display: flex;
   justify-content: center;
-  align-items: center;
+  gap: 50px;
   flex-wrap: wrap;
-  gap: 70px;
-  padding: 0 80px;
-  margin-bottom: 30px;
+  flex-direction: column;
 }
 
 .projects-container-items a:link {
@@ -26,12 +24,12 @@
 
 .projects-container-box {
   display: flex;
-  text-align: center;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  text-transform: capitalize;
-  color: #fff;
 }
+
+/* h3 */
 
 .projects-container-box h3 {
   display: inline-block;
@@ -60,66 +58,48 @@
   transform-origin: bottom left;
 }
 
+/* img */
+
 .projects-container-box-inside {
   position: relative;
-  width: 60%;
-  height: 60%;
+  max-width: 80%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 8px;
 }
 
-img {
-  max-width: 100%;
+.projects-container-box-inside:last-child {
+  margin-bottom: 30px;
+}
+.projects-container-box-inside-img {
+  width: 70%;
+  min-width: 100px;
   max-height: 100%;
-  border-radius: 8px;
 }
 
-.projects-container-box-btns {
-  display: flex;
-  justify-content: space-evenly;
-}
-
-@media only screen and (max-width: 1400px) {
-  .projects-container-box-inside {
-    width: 80%;
-    height: 60%;
-  }
-}
+/* media */
 
 @media only screen and (max-width: 1150px) {
-  .projects-container {
-    height: 100%;
-  }
   .projects-container-items {
     flex-direction: column;
   }
   .projects-container-items:last-child {
-    margin-bottom: 60px;
+    margin-bottom: 30px;
+  }
+  .projects-container-box-inside-img {
+    width: 90%;
   }
 }
-@media only screen and (max-width: 756px) {
-  .projects-container-box-inside {
+
+@media only screen and (max-width: 576px) {
+  .projects-container-box-inside-img {
     width: 100%;
-    height: 100%;
-  }
-  .projects-container-items {
-    padding: 40px;
-  }
-}
-@media only screen and (max-width: 552px) {
-  .projects-container-items {
-    padding: 20px;
   }
 }
 @media only screen and (max-width: 442px) {
-  .projects-container p {
-    margin: 0;
-    font-size: 18px;
-  }
   .projects-container h2 {
-    font-size: 33px;
+    font-size: 30px;
     margin-top: 10px;
   }
 }

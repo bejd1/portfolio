@@ -65,4 +65,7 @@
   .skills-container h2 {
     font-size: 30px;
   }
+  .skills-container-items {
+    gap: 40px;
+  }
 }

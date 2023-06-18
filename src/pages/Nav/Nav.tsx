@@ -18,7 +18,7 @@ import { useState } from "react";
 export const Nav = () => {
   const email: string = "bejdi7@gmail.com";
   const [isCopied, setIsCopied] = useState(false);
-  const [value, copy] = useCopyToClipboard();
+  const [, copyToClipboard] = useCopyToClipboard();
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -26,8 +26,9 @@ export const Nav = () => {
       behavior: "smooth",
     });
   };
-  const copyToClipboard = () => {
-    copy(email);
+
+  const copyTextToClipboard = () => {
+    copyToClipboard(email);
     setIsCopied(true);
   };
 
@@ -44,11 +45,10 @@ export const Nav = () => {
           className="tooltop"
           arrow
         >
-          <div className="nav-left-icon" onClick={() => copyToClipboard()}>
+          <div className="nav-left-icon" onClick={() => copyTextToClipboard()}>
             <Envelope />
           </div>
         </Tooltip>
-        {/* {isCopied && <div>elo</div>} */}
         <div className="nav-left-text">{email}</div>
       </motion.div>
       <motion.div

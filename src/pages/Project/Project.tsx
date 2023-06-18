@@ -31,6 +31,13 @@ export const Project = () => {
     );
   }
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+    });
+  };
+
   return (
     <div className="project-container" key={item.id}>
       <h2>{item.name}</h2>
@@ -41,6 +48,7 @@ export const Project = () => {
         <div className="project-container-right">
           <h4>About</h4>
           <p>{item.desciption}</p>
+
           <h4>Technologies</h4>
           <ul className="project-container-right-technologies">
             {item.technologies.map((tech, index) => {
@@ -62,6 +70,9 @@ export const Project = () => {
               <a href={item.live}>Live</a>
             </div>
           </div>
+          <Link to="/projects" onClick={scrollToTop}>
+            <button>Go back</button>
+          </Link>
         </div>
       </div>
     </div>
