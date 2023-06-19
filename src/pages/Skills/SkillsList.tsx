@@ -28,8 +28,8 @@ export const SkillsList = [
     url: "https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png",
   },
   {
-    name: "firebase",
-    url: "https://cdn4.iconfinder.com/data/icons/google-i-o-2016/512/google_firebase-2-512.png",
+    name: "github",
+    url: "https://upload.wikimedia.org/wikipedia/commons/c/c2/GitHub_Invertocat_Logo.svg",
   },
   {
     name: "redux",

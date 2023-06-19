@@ -1,5 +1,7 @@
 import "./Main.css";
 import { motion } from "framer-motion";
+import { ArrowDownShort } from "react-bootstrap-icons";
+import { NavHashLink } from "react-router-hash-link";
 
 export const Main = () => {
   return (
@@ -25,7 +27,7 @@ export const Main = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 2, delay: 2 }}
         >
-          Front-End Developer
+          Frontend Developer
         </motion.h1>
 
         <motion.p
@@ -37,6 +39,11 @@ export const Main = () => {
           Web Applications that leads to the success of the overall product
         </motion.p>
       </div>
+      <NavHashLink smooth to="/#about-me">
+        <div className="main-container-arrow pulse">
+          <ArrowDownShort />
+        </div>
+      </NavHashLink>
     </div>
   );
 };

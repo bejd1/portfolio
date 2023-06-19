@@ -25,7 +25,6 @@ export const Projects: React.FC = () => {
           return (
             <Link key={id} to={`/project/${id}`} onClick={scrollToTop}>
               <div className="projects-container-box">
-                <h3>{name}</h3>
                 <div className="projects-container-box-inside">
                   <img
                     className="projects-container-box-inside-img"
@@ -33,6 +32,7 @@ export const Projects: React.FC = () => {
                     alt={name}
                   />
                 </div>
+                <h3>{name}</h3>
               </div>
             </Link>
           );

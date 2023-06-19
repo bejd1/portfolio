@@ -8,7 +8,8 @@ type ProjectProp = {
   id: number;
   name: string;
   image: string;
-  desciption: string;
+  description: string;
+  descriptionPlus: string;
   technologies: string[];
   github: string;
   live: string;
@@ -47,7 +48,8 @@ export const Project = () => {
         </div>
         <div className="project-container-right">
           <h4>About</h4>
-          <p>{item.desciption}</p>
+          <p>{item.description}</p>
+          <p>{item.descriptionPlus}</p>
 
           <h4>Technologies</h4>
           <ul className="project-container-right-technologies">

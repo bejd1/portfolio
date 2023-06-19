@@ -1,4 +1,5 @@
 import {
+  Check,
   Envelope,
   Github,
   House,
@@ -16,9 +17,9 @@ import { useCopyToClipboard } from "usehooks-ts";
 import { useState } from "react";
 
 export const Nav = () => {
-  const email: string = "bejdi7@gmail.com";
   const [isCopied, setIsCopied] = useState(false);
   const [, copyToClipboard] = useCopyToClipboard();
+  const email: string = "bejdi7@gmail.com";
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -41,12 +42,12 @@ export const Nav = () => {
         className="nav-left"
       >
         <Tooltip
-          title={!isCopied ? "Copy email" : "Copied!"}
+          title={isCopied ? "Copied!" : "Copy email"}
           className="tooltop"
           arrow
         >
           <div className="nav-left-icon" onClick={() => copyTextToClipboard()}>
-            <Envelope />
+            {isCopied ? <Check fontSize={"20px"} /> : <Envelope />}
           </div>
         </Tooltip>
         <div className="nav-left-text">{email}</div>

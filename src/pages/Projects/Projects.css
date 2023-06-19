@@ -24,9 +24,9 @@
 
 .projects-container-box {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 /* h3 */
