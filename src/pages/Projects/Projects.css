@@ -31,14 +31,15 @@
 
 /* h3 */
 
-.projects-container-box h3 {
+.projects-container-title {
+  font-size: 44px;
   display: inline-block;
   position: relative;
   color: #fff;
   text-underline-offset: 12px;
 }
 
-.projects-container-box h3::after {
+.projects-container-title::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -52,7 +53,7 @@
   transition: transform 0.25s ease-out;
 }
 
-.projects-container-box h3:hover::after {
+.projects-container-title:hover::after {
   text-underline-offset: 5px;
   transform: scaleX(1);
   transform-origin: bottom left;
@@ -92,6 +93,11 @@
   }
 }
 
+@media only screen and (max-width: 756px) {
+  .projects-container-title {
+    font-size: 28px;
+  }
+}
 @media only screen and (max-width: 576px) {
   .projects-container-box-inside-img {
     width: 100%;
@@ -101,5 +107,8 @@
   .projects-container h2 {
     font-size: 30px;
     margin-top: 10px;
+  }
+  .projects-container-title {
+    font-size: 20px;
   }
 }

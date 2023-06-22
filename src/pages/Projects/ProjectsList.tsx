@@ -1,5 +1,6 @@
 import fieldFinder from "../../images/field-finder.png";
 import landOfFootball from "../../images/land-of-football-transformed.png";
+import portfolio from "../../images/portfolio.png";
 
 export const ProjectList = [
   {
@@ -11,8 +12,8 @@ export const ProjectList = [
       "Feel free to check out the Project by visiting the Live Link.",
     image: fieldFinder,
     technologies: ["react", "typescript", "css"],
-    github: "https://github.com/bejd1/Pitch-Finderr/tree/main/src",
-    live: "https://github.com/bejd1/Pitch-Finderr/tree/main/src",
+    github: "https://github.com/bejd1/field-finder",
+    live: "https://bejd1.github.io/field-finder/",
   },
   {
     id: 1,
@@ -23,8 +24,8 @@ export const ProjectList = [
       "Feel free to check out the Project by visiting the Live Link.",
     image: landOfFootball,
     technologies: ["react", "typescript", "redux", "css"],
-    github: "https://github.com/bejd1/Pitch-Finderr/tree/main/src",
-    live: "https://github.com/bejd1/Pitch-Finderr/tree/main/src",
+    github: "https://github.com/bejd1/land-of-football",
+    live: "https://bejd1.github.io/land-of-football/",
   },
   {
     id: 2,
@@ -33,9 +34,9 @@ export const ProjectList = [
       "Portfolio project that I wrote to present my person and projects. Here you can find information about me and links to github and linkedin. At main page in contact section you can leave a message for me with any question! Using my frontend programming skills, I built a site for users on all types of devices.",
     descriptionPlus:
       "Feel free to check out the Project by visiting the Live Link.",
-    image: landOfFootball,
+    image: portfolio,
     technologies: ["react", "typescript", "css"],
-    github: "https://github.com/bejd1/Pitch-Finderr/tree/main/src",
-    live: "https://github.com/bejd1/Pitch-Finderr/tree/main/src",
+    github: "https://github.com/bejd1/Portfolio",
+    live: "https://bejd1.github.io/portfolio/",
   },
 ];

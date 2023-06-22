@@ -2,6 +2,7 @@ import "./Main.css";
 import { motion } from "framer-motion";
 import { ArrowDownShort } from "react-bootstrap-icons";
 import { NavHashLink } from "react-router-hash-link";
+import myPhoto from "../../images/ja.png";
 
 export const Main = () => {
   return (
@@ -9,7 +10,7 @@ export const Main = () => {
       <div className="main-container-left">
         <img
           className="main-container-my-image"
-          src="https://nataliarakowska.pl/wp-content/uploads/2022/11/nrakowska-112.jpg"
+          src={myPhoto}
           alt="my profile img"
         />
       </div>
@@ -34,12 +35,13 @@ export const Main = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 2, delay: 3 }}
+          className="main-container-right-text"
         >
           A Frontend focused Web Developer building the Frontend of Websites and
           Web Applications that leads to the success of the overall product
         </motion.p>
       </div>
-      <NavHashLink smooth to="/#about-me">
+      <NavHashLink smooth to="/portfolio#about-me">
         <div className="main-container-arrow pulse">
           <ArrowDownShort />
         </div>

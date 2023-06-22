@@ -21,7 +21,7 @@ function App() {
       <BrowserRouter>
         <Nav />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/portfolio" element={<Home />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/project/:id" element={<Project />} />
           <Route path="/aboutme" element={<AboutMe />} />
@@ -31,7 +31,7 @@ function App() {
             element={
               <div className="page-not-exist">
                 <h2>This page does not exist</h2>
-                <Link to="/" onClick={scrollToTop}>
+                <Link to="/portfolio" onClick={scrollToTop}>
                   <button className="page-not-exits-btn">back to home</button>
                 </Link>
               </div>

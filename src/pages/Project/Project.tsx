@@ -25,7 +25,7 @@ export const Project = () => {
     return (
       <div className="page-not-exist">
         <h2>This page does not exist</h2>
-        <Link to="/">
+        <Link to="/portfolio">
           <button className="page-not-exits-btn">back to home</button>
         </Link>
       </div>

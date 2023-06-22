@@ -23,8 +23,8 @@ export const Contact = () => {
               <div className="icon">
                 <Linkedin />
               </div>
-              <a href="https://www.linkedin.com/in/bejdi7-undefined-a6393b273/">
-                Linkedin
+              <a href="https://www.linkedin.com/in/filip-bajdan-a6393b273/">
+                LinkedIn
               </a>
             </div>
             <div className="contact-container-info-phone">

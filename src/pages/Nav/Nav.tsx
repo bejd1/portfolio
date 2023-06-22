@@ -59,7 +59,7 @@ export const Nav = () => {
         className="nav-right"
       >
         <div className="nav-right-links">
-          <Link to="/" onClick={scrollToTop}>
+          <Link to="/portfolio" onClick={scrollToTop}>
             <div className="nav-right-link">
               <div className="nav-right-link-icon">
                 <House />
@@ -67,7 +67,7 @@ export const Nav = () => {
               <p className="nav-right-link-title">Home</p>
             </div>
           </Link>
-          <NavHashLink smooth to="/#about">
+          <NavHashLink smooth to="/portfolio#about">
             <div className="nav-right-link">
               <div className="nav-right-link-icon">
                 <Person />
@@ -83,12 +83,12 @@ export const Nav = () => {
               <p className="nav-right-link-title">Projects</p>
             </div>
           </Link>
-          <a href="https://www.linkedin.com/in/bejdi7-undefined-a6393b273/">
+          <a href="https://www.linkedin.com/in/filip-bajdan-a6393b273/">
             <div className="nav-right-link">
               <div className="nav-right-link-icon">
                 <Linkedin />
               </div>
-              <p className="nav-right-link-title">Linkedin</p>
+              <p className="nav-right-link-title">LinkedIn</p>
             </div>
           </a>
           <a href="https://github.com/bejd1">

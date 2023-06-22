@@ -57,7 +57,7 @@ export default function TemporaryDrawer() {
     >
       <List className="menu">
         <ListItem className="menu-list">
-          <Link to="/" onClick={scrollToTop}>
+          <Link to="/portfolio" onClick={scrollToTop}>
             <ListItemButton className="menu-item">
               <ListItemIcon className="menu-icon">
                 <House style={{ color: "black" }} />
@@ -65,7 +65,7 @@ export default function TemporaryDrawer() {
               <ListItemText primary="Home" style={{ color: "black" }} />
             </ListItemButton>
           </Link>
-          <NavHashLink smooth to="/#about">
+          <NavHashLink smooth to="/portfolio#about">
             <ListItemButton className="menu-item">
               <ListItemIcon className="menu-icon">
                 <Person style={{ color: "black" }} />
@@ -81,12 +81,12 @@ export default function TemporaryDrawer() {
               <ListItemText primary="Projects" style={{ color: "black" }} />
             </ListItemButton>
           </Link>
-          <a href="https://www.linkedin.com/in/bejdi7-undefined-a6393b273/">
+          <a href="https://www.linkedin.com/in/filip-bajdan-a6393b273/">
             <ListItemButton className="menu-item">
               <ListItemIcon className="menu-icon">
                 <Linkedin style={{ color: "black" }} />
               </ListItemIcon>
-              <ListItemText primary="Linkedin" style={{ color: "black" }} />
+              <ListItemText primary="LinkedIn" style={{ color: "black" }} />
             </ListItemButton>
           </a>
           <a href="https://github.com/bejd1">

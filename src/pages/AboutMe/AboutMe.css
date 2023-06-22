@@ -7,7 +7,7 @@
   margin: 0;
   text-align: center;
   font-size: 44px;
-  letter-spacing: 12px;
+  letter-spacing: 7px;
   margin-bottom: 60px;
   text-transform: capitalize;
 }
@@ -28,6 +28,9 @@
 }
 
 @media only screen and (max-width: 442px) {
+  .about-me-container {
+    margin: 0;
+  }
   .about-me-container h2 {
     font-size: 30px;
   }

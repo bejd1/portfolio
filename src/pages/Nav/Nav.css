@@ -97,6 +97,7 @@
   position: fixed;
   top: 20px;
   right: 35px;
+  z-index: 11;
 }
 
 .tooltip {
