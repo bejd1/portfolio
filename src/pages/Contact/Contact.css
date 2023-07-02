@@ -5,19 +5,25 @@
   margin-bottom: 30px;
 }
 
+.contact-container-underline {
+  height: 2px;
+  width: 150px;
+  background-color: #2d79c7;
+  margin-bottom: 60px;
+}
+
 .contact-container h2 {
   margin: 0;
   text-align: center;
   font-size: 44px;
   letter-spacing: 12px;
-  margin-bottom: 20px;
+  margin-bottom: 6px;
 }
 
 .contact-container > p {
   text-align: center;
   margin: 0;
   margin-bottom: 30px;
-  margin-top: 16px;
   padding: 0 20px;
 }
 

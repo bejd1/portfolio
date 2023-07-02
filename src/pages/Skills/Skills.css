@@ -1,12 +1,20 @@
 .skills-container {
   padding-top: 50px;
 }
+
+.skills-container-underline {
+  height: 2px;
+  width: 150px;
+  background-color: #2d79c7;
+  margin-bottom: 60px;
+}
+
 .skills-container h2 {
   margin: 0;
   text-align: center;
   font-size: 44px;
   letter-spacing: 12px;
-  margin-bottom: 60px;
+  margin-bottom: 6px;
 }
 
 .skills-container-items {

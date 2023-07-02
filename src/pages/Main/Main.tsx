@@ -2,7 +2,7 @@ import "./Main.css";
 import { motion } from "framer-motion";
 import { ArrowDownShort } from "react-bootstrap-icons";
 import { NavHashLink } from "react-router-hash-link";
-import myPhoto from "../../images/ja.png";
+import myPhoto from "../../images/me.png";
 
 export const Main = () => {
   return (

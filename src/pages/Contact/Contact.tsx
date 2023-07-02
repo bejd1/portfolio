@@ -6,6 +6,9 @@ export const Contact = () => {
   return (
     <div className="contact-container">
       <h2>Contact</h2>
+      <div className="center">
+        <div className="contact-container-underline"></div>
+      </div>
       <p>Have any question? Drop me a message 😁</p>
       <div className="contact-container-row">
         <div className="contact-container-left">

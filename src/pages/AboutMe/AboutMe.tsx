@@ -5,6 +5,9 @@ export const AboutMe = () => {
   return (
     <div className="about-me-container" id="about">
       <h2>About me</h2>
+      <div className="center">
+        <div className="about-me-container-underline"></div>
+      </div>
       <div className="about-me-container-text">
         <p>
           I'm a Frontend Web Developer building the Front-end of Websites and

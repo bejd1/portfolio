@@ -9,6 +9,9 @@ export const Skills = () => {
   return (
     <div className="skills-container">
       <h2>Skills</h2>
+      <div className="center">
+        <div className="skills-container-underline"></div>
+      </div>
       <div
         className="skills-container-items"
         ref={ref}
