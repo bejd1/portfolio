@@ -47,17 +47,17 @@ export const Project = () => {
           <img src={item.image} alt={item.name} />
         </div>
         <div className="project-container-right">
-          <h4>About</h4>
+          <h4 style={{ fontSize: "23px", margin: "0" }}>About</h4>
           <p>{item.description}</p>
           <p>{item.descriptionPlus}</p>
 
-          <h4>Technologies</h4>
+          <h4 style={{ fontSize: "18px" }}>Technologies</h4>
           <ul className="project-container-right-technologies">
             {item.technologies.map((tech, index) => {
               return <li key={index}>{tech}</li>;
             })}
           </ul>
-          <h4>Links</h4>
+          <h4 style={{ fontSize: "18px" }}>Links</h4>
           <div className="project-container-right-btns">
             <div className="project-container-right-btns-github">
               <div className="nav-right-link-icon">
