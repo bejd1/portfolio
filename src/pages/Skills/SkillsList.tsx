@@ -39,4 +39,12 @@ export const SkillsList = [
     name: "typescript",
     url: "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/2048px-Typescript_logo_2020.svg.png",
   },
+  {
+    name: "MUI",
+    url: "https://v4.mui.com/static/logo.png",
+  },
+  {
+    name: "Firebase",
+    url: "https://cdn4.iconfinder.com/data/icons/google-i-o-2016/512/google_firebase-2-512.png",
+  },
 ];

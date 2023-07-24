@@ -9,7 +9,9 @@ export const Contact = () => {
       <div className="center">
         <div className="contact-container-underline"></div>
       </div>
-      <p>Have any question? Drop me a message 😁</p>
+      <p className="contact-container-questions">
+        Have any question? Drop me a message 😁
+      </p>
       <div className="contact-container-row">
         <div className="contact-container-left">
           <ContactUs />
